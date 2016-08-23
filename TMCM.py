@@ -95,7 +95,7 @@ if __name__ == "__main__":
 
     #rocker = StepRocker(200, port='COM3')
     stepper = TMCLDevice("COM3")
-    stepper.sap(0,4,500)
-    stepper.mvp(0,"REL",-12800)
+    stepper.sap(0,4,500) #set the speed
+    stepper.mvp(0,"REL",-12800) #turn 1 revolution ccw
     #time.sleep(1)
     #rocker.stop()

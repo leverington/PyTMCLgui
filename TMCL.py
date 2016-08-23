@@ -594,8 +594,8 @@ class TMCLDevice(object):
         pn = int(parameter_number)
         if not 0 <= mn <= 2:
             raise TMCLError("GAP: motor_number not in range(3)")
-        if pn not in AXIS_PARAMETER.keys():
-            raise TMCLError(prefix+"parameter number not valid")
+        #if pn not in AXIS_PARAMETER.keys():
+        #    raise TMCLError(prefix+"parameter number not valid")
         status, value = self._query((0x01, cn, pn, mn, 0x0000))
         if status != STAT_OK:
             raise TMCLError("GAP: got status " + STATUSCODES[status]
